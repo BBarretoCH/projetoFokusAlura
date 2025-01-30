@@ -140,9 +140,8 @@ btnRemoverConcluidas.addEventListener('click', () => {
 })
 
 btnRemovertodas.addEventListener('click', () => {
-    ulTarefas.querySelectorAll('li').forEach(li => {
-        li.remove();
+    ulTarefas.querySelectorAll('li').forEach(item => {
+        item.remove();
     })
-    localStorage.clear();
+    localStorage.removeItem('tarefas');
 })
-
